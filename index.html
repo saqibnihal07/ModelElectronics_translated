@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Electronics</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Lobster&display=swap" rel="stylesheet">
+
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- Language Selection -->
+    <div class="language-selection">
+        <div class="language-option" id="en" onclick="changeLanguage('en')">English</div>
+        <div class="language-option" id="kn" onclick="changeLanguage('kn')">ಕನ್ನಡ</div>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <span>
+
+            <h1 id="model-text" class="model-text">Model</h1> 
+        <h1 id="electronics-text" class="electronics-text">Electronics</h1>
+
+        </span>
+        
+        <a href="https://maps.app.goo.gl/zATaqVmFn5wbCGP58" target="_blank" style="color: #E67E22;" id="location">
+            <svg class="gmap-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20px" height="20px">
+                <path d="M19 11.5V9a7 7 0 1 0-14 0v2.5M5 19l7-7 7 7"/>
+            </svg>
+            KR Puram Road, Shivamogga
+        </a>
+        <p id="headline1" class="headline">
+            We sell used LCDs and LEDs at the cheapest prices and offer repair services
+        </p>
+    </header>
+
+    <!-- Infinite Running Banner -->
+    <div class="banner">
+        <div id="banner-content" class="banner-content">
+            <span>Free Home Delivery on TV purchases&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Free Home Delivery on TV purchases&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Free Home Delivery on TV purchases&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Free Home Delivery on TV purchases&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Free Home Delivery on TV purchases&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Free Home Delivery on TV purchases...</span>        </div>
+    </div>
+
+    <div class="container">
+        <h1 id="available-tvs">Available Used TVs</h1>
+
+        <!-- TV Item 1 -->
+        <div class="tv-item">
+            <img src="tv1.jpg" alt="Samsung 40 inch LED TV">
+            <h2 id="tv1-title">Samsung 40" LED TV</h2>
+            <p id="tv1-price">Price: 
+                <span style="text-decoration: line-through;">₹20,000</span>
+            <p>15,000</p>
+            </p>
+            <a href="tel:9448159465" class="call-button" id="call1">Call Now</a>
+        </div>
+
+        <!-- TV Item 2 -->
+        <div class="tv-item">
+            <img src="tv2.jpg" alt="Sony 50 inch LCD TV">
+            <h2 id="tv2-title">Sony 50" LCD TV</h2>
+            <p id="tv2-price">Price: <span style="text-decoration: line-through;">₹12,350</span>
+            <p>10,000</p>
+            </p>
+            <a href="tel:9448159465" class="call-button" id="call2">Call Now</a>
+        </div>
+
+        <!-- TV Item 3 -->
+        <div class="tv-item">
+            <img src="tv3.jpg" alt="LG 32 inch LED TV">
+            <h2 id="tv3-title">LG 32" LED TV</h2>
+            <p id="tv3-price">Price: 
+                <span style="text-decoration: line-through;">₹10,050</span>
+                <p>9,500</p>
+            </p>
+            <a href="tel:9448159465" class="call-button" id="call3">Call Now</a>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p id="footer-location">
+                
+                <a href="https://maps.app.goo.gl/zATaqVmFn5wbCGP58" target="_blank">
+                    <svg class="gmap-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20px" height="20px">
+                        <path d="M19 11.5V9a7 7 0 1 0-14 0v2.5M5 19l7-7 7 7"/>
+                    </svg>
+                    Model Electronics, Shivamogga
+                </a>
+            </p>
+            <p id="footer-contact">
+               <a href="tel:9448159465">9448159465</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function changeLanguage(selectedLanguage) {
+            const enOption = document.getElementById("en");
+            const knOption = document.getElementById("kn");
+
+            // Remove selected class from both options
+            enOption.classList.remove("selected");
+            knOption.classList.remove("selected");
+
+            // Set the selected language
+            if (selectedLanguage === "kn") {
+                knOption.classList.add("selected");
+            } else {
+                enOption.classList.add("selected");
+            }
+
+            // Update the text based on the selected language
+            if (selectedLanguage === "kn") {
+                // Kannada Translations
+                document.getElementById("model-text").innerText = "ಮೋಡಲ್";
+                document.getElementById("electronics-text").innerText = "ಇಲೆಕ್ಟ್ರಾನಿಕ್";
+                document.getElementById("location").innerText = "ಕೆಆರ್ ಪುರಮ್ ರಸ್ತೆ, ಶಿವಮೊಗ್ಗ";
+                document.getElementById("headline1").innerText = "LCD ಮತ್ತು LED ಗಳು ಕಡಿಮೆ ಬೆಲೆಗೆ ಮಾರುತ್ತಾರೆ ಮತ್ತು ದುರಸ್ತಿ ಸೇವೆಗಳನ್ನು ನೀಡುತ್ತೇವೆ";
+                document.getElementById("banner-content").innerText = "ಟಿವಿ ಖರೀದಿಗಳ ಮೇಲೆ ಉಚಿತ ಮನೆ ವಿತರಣಾ ಸೇವೆ";
+                document.getElementById("available-tvs").innerText = "ಲಭ್ಯವಿರುವ ಬಳಸಲಾದ ಟಿವಿಗಳು";
+                document.getElementById("call1").innerText = "ಈಗ ಕರೆ ಮಾಡಿ";
+                document.getElementById("call2").innerText = "ಈಗ ಕರೆ ಮಾಡಿ";
+                document.getElementById("call3").innerText = "ಈಗ ಕರೆ ಮಾಡಿ";
+               
+            } else {
+                // English Text (default)
+                document.getElementById("model-text").innerText = "Model";
+                document.getElementById("electronics-text").innerText = "Electronics";
+                document.getElementById("location").innerText = "KR Puram Road, Shivamogga";
+                document.getElementById("headline1").innerText = "We sell LCDs and LEDs at the cheapest prices and offer repair services";
+                document.getElementById("banner-text").innerText = "Free Home Delivery on TV purchases...";
+                document.getElementById("available-tvs").innerText = "Available Used TVs";
+                document.getElementById("tv1-title").innerText = "Samsung 40\" LED TV";
+                document.getElementById("tv1-price").innerText = "Price: ₹20,000";
+                document.getElementById("call1").innerText = "Call Now";
+                document.getElementById("tv2-title").innerText = "Sony 50\" LCD TV";
+                document.getElementById("tv2-price").innerText = "Price: ₹12,350";
+                document.getElementById("call2").innerText = "Call Now";
+                document.getElementById("tv3-title").innerText = "LG 32\" LED TV";
+                document.getElementById("tv3-price").innerText = "Price: ₹10,050";
+                document.getElementById("call3").innerText = "Call Now";
+                document.getElementById("footer-location").innerText = "Location:";
+                document.getElementById("footer-contact").innerText = "Contact: ";
+            }
+        }
+    </script>
+</body>
+</html>
