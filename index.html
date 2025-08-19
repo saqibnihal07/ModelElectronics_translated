@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +16,8 @@
 <body>
     <!-- Language Selection -->
     <div class="language-selection">
-        <div class="language-option" id="en" onclick="changeLanguage('en')">English</div>
-        <div class="language-option" id="kn" onclick="changeLanguage('kn')">ಕನ್ನಡ</div>
+        <div class="language-option" id="en" onclick="changeLanguage('en')" style="font-size: 13px;">English</div>
+        <div class="language-option" id="kn" onclick="changeLanguage('kn')" style="font-size: 13px;">ಕನ್ನಡ</div>
     </div>
 
     <!-- Header Section -->
@@ -34,27 +35,51 @@
             </svg>
             KR Puram Road, Shivamogga
         </a>
-        <p id="headline1" class="headline">
-            We sell used LCDs and LEDs at the cheapest prices and offer repair services
-        </p>
+       
+
     </header>
 
-    <!-- Infinite Running Banner -->
-    <div class="banner">
-        <div id="banner-content" class="banner-content">
-            <span>Free Home Delivery on TV purchases&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Free Home Delivery on TV purchases&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Free Home Delivery on TV purchases&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Free Home Delivery on TV purchases&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Free Home Delivery on TV purchases&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Free Home Delivery on TV purchases...</span>        </div>
-    </div>
 
-    <div class="container">
-        <h1 id="available-tvs">Available Used TVs</h1>
+
+
+
+<div class="banner">
+  <div class="banner-track">
+    <span id="banner1">Affordable Prices</span>
+    <span id="banner2">Free Pick-up and Drop for repairs</span>
+    <span id="banner3">Best Second hand LCDs and LEDs available</span>
+
+    <!-- Duplicate content for seamless looping -->
+    <span id="banner4">Affordable Prices</span>
+    <span id="banner5">Free Pick-up and Drop for repairs</span>
+    <span id="banner6">Best Second hand LCDs and LEDs available</span>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <p id="headline1" class="headline">
+        Buy Scratchless Second-Hand TVs at Affordable price <br>– Free Home Delivery 🚚        </p>
+    
+        <div class="container">
 
         <!-- TV Item 1 -->
         <div class="tv-item">
             <img src="tv1.jpg" alt="Samsung 40 inch LED TV">
             <h2 id="tv1-title">Samsung 40" LED TV</h2>
             <p id="tv1-price">Price: 
-                <span style="text-decoration: line-through;">₹20,000</span>
-            <p>15,000</p>
+                <span class="original_price">₹20,000</span>
+            <p class="selling_price">15,000</p>
             </p>
             <a href="tel:9448159465" class="call-button" id="call1">Call Now</a>
         </div>
@@ -63,8 +88,8 @@
         <div class="tv-item">
             <img src="tv2.jpg" alt="Sony 50 inch LCD TV">
             <h2 id="tv2-title">Sony 50" LCD TV</h2>
-            <p id="tv2-price">Price: <span style="text-decoration: line-through;">₹12,350</span>
-            <p>10,000</p>
+            <p id="tv2-price">Price: <span class="original_price">₹12,350</span>
+            <p class="selling_price">10,000</p>
             </p>
             <a href="tel:9448159465" class="call-button" id="call2">Call Now</a>
         </div>
@@ -74,8 +99,8 @@
             <img src="tv3.jpg" alt="LG 32 inch LED TV">
             <h2 id="tv3-title">LG 32" LED TV</h2>
             <p id="tv3-price">Price: 
-                <span style="text-decoration: line-through;">₹10,050</span>
-                <p>9,500</p>
+                <span class="original_price">₹10,050</span>
+                <p class="selling_price">9,500</p>
             </p>
             <a href="tel:9448159465" class="call-button" id="call3">Call Now</a>
         </div>
@@ -99,56 +124,6 @@
         </div>
     </footer>
 
-    <script>
-        function changeLanguage(selectedLanguage) {
-            const enOption = document.getElementById("en");
-            const knOption = document.getElementById("kn");
-
-            // Remove selected class from both options
-            enOption.classList.remove("selected");
-            knOption.classList.remove("selected");
-
-            // Set the selected language
-            if (selectedLanguage === "kn") {
-                knOption.classList.add("selected");
-            } else {
-                enOption.classList.add("selected");
-            }
-
-            // Update the text based on the selected language
-            if (selectedLanguage === "kn") {
-                // Kannada Translations
-                document.getElementById("model-text").innerText = "ಮೋಡಲ್";
-                document.getElementById("electronics-text").innerText = "ಇಲೆಕ್ಟ್ರಾನಿಕ್";
-                document.getElementById("location").innerText = "ಕೆಆರ್ ಪುರಮ್ ರಸ್ತೆ, ಶಿವಮೊಗ್ಗ";
-                document.getElementById("headline1").innerText = "LCD ಮತ್ತು LED ಗಳು ಕಡಿಮೆ ಬೆಲೆಗೆ ಮಾರುತ್ತಾರೆ ಮತ್ತು ದುರಸ್ತಿ ಸೇವೆಗಳನ್ನು ನೀಡುತ್ತೇವೆ";
-                document.getElementById("banner-content").innerText = "ಟಿವಿ ಖರೀದಿಗಳ ಮೇಲೆ ಉಚಿತ ಮನೆ ವಿತರಣಾ ಸೇವೆ";
-                document.getElementById("available-tvs").innerText = "ಲಭ್ಯವಿರುವ ಬಳಸಲಾದ ಟಿವಿಗಳು";
-                document.getElementById("call1").innerText = "ಈಗ ಕರೆ ಮಾಡಿ";
-                document.getElementById("call2").innerText = "ಈಗ ಕರೆ ಮಾಡಿ";
-                document.getElementById("call3").innerText = "ಈಗ ಕರೆ ಮಾಡಿ";
-               
-            } else {
-                // English Text (default)
-                document.getElementById("model-text").innerText = "Model";
-                document.getElementById("electronics-text").innerText = "Electronics";
-                document.getElementById("location").innerText = "KR Puram Road, Shivamogga";
-                document.getElementById("headline1").innerText = "We sell LCDs and LEDs at the cheapest prices and offer repair services";
-                document.getElementById("banner-text").innerText = "Free Home Delivery on TV purchases...";
-                document.getElementById("available-tvs").innerText = "Available Used TVs";
-                document.getElementById("tv1-title").innerText = "Samsung 40\" LED TV";
-                document.getElementById("tv1-price").innerText = "Price: ₹20,000";
-                document.getElementById("call1").innerText = "Call Now";
-                document.getElementById("tv2-title").innerText = "Sony 50\" LCD TV";
-                document.getElementById("tv2-price").innerText = "Price: ₹12,350";
-                document.getElementById("call2").innerText = "Call Now";
-                document.getElementById("tv3-title").innerText = "LG 32\" LED TV";
-                document.getElementById("tv3-price").innerText = "Price: ₹10,050";
-                document.getElementById("call3").innerText = "Call Now";
-                document.getElementById("footer-location").innerText = "Location:";
-                document.getElementById("footer-contact").innerText = "Contact: ";
-            }
-        }
-    </script>
+    <script src="translation.js">    </script>
 </body>
 </html>
